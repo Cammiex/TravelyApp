@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
             when(it.itemId){
                 R.id.home -> replaceFragment(Home())
-                R.id.movies -> replaceFragment(Favorite())
+                R.id.favorite -> replaceFragment(Favorite())
                 R.id.profile -> replaceFragment(Profile())
 
                 else ->{

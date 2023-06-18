@@ -18,7 +18,6 @@ class Adapter  : RecyclerView.Adapter<Adapter.ViewHolder>(){
         val textTitle: TextView = itemView.findViewById(R.id.textTitle)
         val textDesc: TextView = itemView.findViewById(R.id.textDesc)
         val imageContent: ImageView = itemView.findViewById(R.id.imageContent)
-//        val textCity: TextView = itemView.findViewById(R.id.textCity)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -31,7 +30,6 @@ class Adapter  : RecyclerView.Adapter<Adapter.ViewHolder>(){
         holder.textTitle.text = currentItem.itemsTitle
         holder.textDesc.text = currentItem.itemsCity
         holder.imageContent.setImageResource(currentItem.itemsImages)
-//        holder.textCity.text = currentItem.itemsCity
 
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, DetailActivity::class.java)

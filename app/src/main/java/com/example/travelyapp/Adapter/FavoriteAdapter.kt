@@ -16,9 +16,7 @@ class FavoriteAdapter  : RecyclerView.Adapter<FavoriteAdapter.ViewHolder>(){
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textTitle: TextView = itemView.findViewById(R.id.textTitle)
-//        val textDesc: TextView = itemView.findViewById(R.id.textDesc)
         val imageContent: ImageView = itemView.findViewById(R.id.imageContent)
-//        val textCity: TextView = itemView.findViewById(R.id.textCity)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,9 +27,7 @@ class FavoriteAdapter  : RecyclerView.Adapter<FavoriteAdapter.ViewHolder>(){
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = items[position]
         holder.textTitle.text = currentItem.itemsTitle
-//        holder.textDesc.text = currentItem.itemsCity
         holder.imageContent.setImageResource(currentItem.itemsImages)
-//        holder.textCity.text = currentItem.itemsCity
 
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, DetailActivity::class.java)
